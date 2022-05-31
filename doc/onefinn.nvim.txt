@@ -1,0 +1,158 @@
+================================================================================
+                                                                 *onefinn.nvim*
+                                         __             _         ~
+  ____  ____  ___  ____  ____  _________/ / ____ _   __(_)___ ___ ~
+ / __ \/ __ \/ _ \/ __ \/ __ \/ ___/ __  / / __ \ | / / / __ `__ \~
+/ /_/ / / / /  __/ / / / /_/ / /  / /_/ / / / / / |/ / / / / / / /~
+\____/_/ /_/\___/_/ /_/\____/_/   \__,_(_)_/ /_/|___/_/_/ /_/ /_/ ~
+              ( modded )
+================================================================================
+CONTENTS
+
+    1. Features ................. |onefinn-features|
+        1.1. Plugin Support ..... |onefinn-plugin_support|
+    2. Requirements ............. |onefinn-requirements|
+    3. Installation ............. |onefinn-installation|
+    4. Usage .................... |onefinn-usage|
+    5. Configuration ............ |onefinn-configuration|
+    6. Credits .................. |onefinn-credits|
+
+================================================================================
+FEATURES                                                     *onefinn-features*
+
+Onefinn is a Neovim theme written in Lua that combines the Nord and Atom One
+Dark color palettes. More specifically, it seeks to add more vibrance to the
+Nord theme and provide a great programming experience by leveraging Treesitter!
+
+--------------------------------------------------------------------------------
+PLUGIN SUPPORT                                         *onefinn-plugin_support*
+
+*   Treesitter (https://github.com/nvim-treesitter/nvim-treesitter)
+*   LSP Diagnostics (https://neovim.io/doc/user/lsp.html)
+*   Trouble (https://github.com/folke/trouble.nvim)
+*   Git Signs (https://github.com/lewis6991/gitsigns.nvim)
+*   Git Gutter (https://github.com/airblade/vim-gitgutter)
+*   Neogit (https://github.com/TimUntersberger/neogit)
+*   Telescope (https://github.com/nvim-telescope/telescope.nvim)
+*   Cmp (https://github.com/hrsh7th/nvim-cmp)
+*   NvimTree (https://github.com/kyazdani42/nvim-tree.lua)
+*   WhichKey (https://github.com/folke/which-key.nvim)
+*   Indent Blankline (https://github.com/lukas-reineke/indent-blankline.nvim)
+*   Dashboard (https://github.com/glepnir/dashboard-nvim)
+*   BufferLine (https://github.com/akinsho/nvim-bufferline.lua)
+*   Lualine (https://github.com/hoob3rt/lualine.nvim)
+*   Notify (https://github.com/rcarriga/nvim-notify)
+*   Lightspeed (https://github.com/ggandor/lightspeed.nvim)
+*   Sneak (https://github.com/justinmk/vim-sneak)
+*   Hop (https://github.com/phaazon/hop.nvim)
+*   Fern (https://github.com/lambdalisue/fern.vim)
+*   Barbar (https://github.com/romgrk/barbar.nvim)
+*   LSP Saga (https://github.com/glepnir/lspsaga.nvim)
+*   Dap (https://github.com/mfussenegger/nvim-dap)
+
+================================================================================
+REQUIREMENTS                                             *onefinn-requirements*
+
+*   Neovim >= 0.5.0
+
+================================================================================
+INSTALLATION                                             *onefinn-installation*
+
+Install via your favourite package manager:
+>
+    " If you are using Vim Plug
+    Plug 'rmehri01/onefinn.nvim', { 'branch': 'main' }
+<
+>
+    -- If you are using Packer
+    use 'rmehri01/onefinn.nvim'
+<
+
+================================================================================
+USAGE                                                           *onefinn-usage*
+
+For the defaults, simply enable the colorscheme:
+>
+    " Vim Script
+    colorscheme onefinn
+<
+>
+    -- Lua
+    require('onefinn').setup()
+<
+
+To enable the `onefinn` theme for `Lualine`, specify it in your lualine settings:
+>
+    require('lualine').setup {
+      options = {
+        -- ... your lualine config
+        theme = 'onefinn'
+        -- ... your lualine config
+      }
+    }
+<
+
+================================================================================
+CONFIGURATION                                           *onefinn-configuration*
+
+The configuration of different options is done through a setup function which
+will handle setting the colors, so there's no need to set `colorscheme` yourself!
+This is an example of the function with the default values:
+>
+    require('onefinn').setup({
+      theme = nil, -- "dark" or "light". Alternatively, remove the option and set vim.o.background instead
+      borders = true, -- Split window borders
+      fade_nc = false, -- Fade non-current windows, making them more distinguishable
+      -- Style that is applied to various groups: see `highlight-args` for options
+      styles = {
+        comments = "NONE",
+        strings = "NONE",
+        keywords = "NONE",
+        functions = "NONE",
+        variables = "NONE",
+        diagnostics = "underline",
+      },
+      disable = {
+        background = false, -- Disable setting the background color
+        cursorline = false, -- Disable the cursorline
+        eob_lines = true, -- Hide the end-of-buffer lines
+      },
+      -- Inverse highlight for different groups
+      inverse = {
+        match_paren = false,
+      },
+      custom_highlights = {}, -- Overwrite default highlight groups
+      custom_colors = {}, -- Overwrite default colors
+    })
+<
+
+Here is an example of overwriting the default highlight groups and colors:
+>
+    local colors = require("onefinn.colors").load()
+
+    require("onefinn").setup({
+      custom_highlights = {
+        TSConstructor = { fg = colors.dark_blue },
+      },
+      custom_colors = {
+        red = "#ffffff",
+      },
+    })
+<
+
+You can also use the onefinn color palette for other plugins using `local colors = require("onefinn.colors").load()`!
+
+
+================================================================================
+CREDITS                                                       *onefinn-credits*
+
+I was highly inspired by these other awesome themes, check them out!
+
+*   tokyonight.nvim (https://github.com/folke/tokyonight.nvim)
+*   onedark.nvim (https://github.com/navarasu/onedark.nvim)
+*   NvChad's Nord Theme (https://github.com/NvChad/NvChad#theme-showcase)
+*   material.nvim (https://github.com/marko-cerovac/material.nvim)
+*   nord.nvim (https://github.com/shaunsingh/nord.nvim)
+
+================================================================================
+vim:tw=78:ts=4:ft=help:norl:
