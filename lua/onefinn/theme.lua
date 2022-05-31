@@ -211,7 +211,7 @@ function theme.highlights(colors, config)
       TablineSel = { fg = colors.cyan, bg = colors.active },
       Tabline = { fg = colors.light_gray, bg = colors.active },
       -- titles for output from ":set all", ":autocmd" etc.
-      Title = { fg = colors.green, bg = colors.none, style = "bold" },
+      Title = { fg = colors.green, bg = colors.float, style = "bold" },
       -- Visual mode selection
       Visual = { fg = colors.none, bg = colors.highlight },
       -- Visual mode selection when vim is "Not Owning the Selection".
