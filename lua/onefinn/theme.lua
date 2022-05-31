@@ -674,7 +674,7 @@ function theme.highlights(colors, config)
       -- BufferLine
       BufferLineIndicatorSelected = { fg = colors.yellow },
       BufferLineFill = { bg = colors.active },
-      BufferLineSel = { bg = colors.float },
+      BufferLine = { bg = colors.float },
 
       -- barbar
       BufferCurrent = { fg = colors.fg, bg = colors.active },
