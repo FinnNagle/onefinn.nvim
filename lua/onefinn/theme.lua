@@ -208,10 +208,10 @@ function theme.highlights(colors, config)
       -- tab pages line, where there are no labels
       TabLineFill = { fg = colors.light_gray, bg = colors.active },
       -- tab pages line, active tab page label
-      TablineSel = { fg = colors.cyan, bg = colors.active },
+      TablineSel = { fg = colors.cyan, bg = colors.bg },
       Tabline = { fg = colors.light_gray, bg = colors.active },
       -- titles for output from ":set all", ":autocmd" etc.
-      Title = { fg = colors.green, bg = colors.float, style = "bold" },
+      Title = { fg = colors.green, bg = colors.none, style = "bold" },
       -- Visual mode selection
       Visual = { fg = colors.none, bg = colors.highlight },
       -- Visual mode selection when vim is "Not Owning the Selection".
@@ -223,9 +223,9 @@ function theme.highlights(colors, config)
       -- current match in 'wildmenu' completion
       WildMenu = { fg = colors.yellow, bg = colors.none, style = "bold" },
       -- window bar of current window
-      WinBar = { fg = colors.fg, bg = colors.active },
+      WinBar = { fg = colors.fg, bg = colors.bg },
       -- window bar of not-current windows
-      WinBarNC = { fg = colors.light_gray, bg = colors.active },
+      WinBarNC = { fg = colors.light_gray, bg = colors.bg },
       -- Screen-column at the cursor, when 'cursorcolumn' is set.
       CursorColumn = { fg = colors.none, bg = colors.float },
       -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
@@ -253,12 +253,12 @@ function theme.highlights(colors, config)
       DashboardFooter = { fg = colors.green, style = "italic" },
 
       -- normal text and background color
-      Normal = { fg = colors.fg, bg = colors.float },
+      Normal = { fg = colors.fg, bg = colors.bg },
       NormalNC = { bg = colors.bg },
       SignColumn = { fg = colors.fg, bg = colors.none },
 
       -- the column separating vertically split windows
-      VertSplit = { fg = colors.active },
+      VertSplit = { fg = colors.bg },
 
       EndOfBuffer = { fg = colors.gray },
     }
@@ -673,20 +673,19 @@ function theme.highlights(colors, config)
 
       -- BufferLine
       BufferLineIndicatorSelected = { fg = colors.yellow },
-      BufferLineFill = { bg = colors.active },
-      BufferLine = { bg = colors.float },
+      BufferLineFill = { bg = colors.bg },
 
       -- barbar
-      BufferCurrent = { fg = colors.fg, bg = colors.active },
-      BufferCurrentIndex = { fg = colors.fg, bg = colors.active },
-      BufferCurrentMod = { fg = colors.yellow, bg = colors.active, style = "bold" },
-      BufferCurrentSign = { fg = colors.cyan, bg = colors.active },
-      BufferCurrentTarget = { fg = colors.red, bg = colors.active, style = "bold" },
-      BufferVisible = { fg = colors.fg, bg = colors.active },
-      BufferVisibleIndex = { fg = colors.fg, bg = colors.active },
-      BufferVisibleMod = { fg = colors.yellow, bg = colors.active, style = "bold" },
-      BufferVisibleSign = { fg = colors.light_gray, bg = colors.active },
-      BufferVisibleTarget = { fg = colors.red, bg = colors.active, style = "bold" },
+      BufferCurrent = { fg = colors.fg, bg = colors.bg },
+      BufferCurrentIndex = { fg = colors.fg, bg = colors.bg },
+      BufferCurrentMod = { fg = colors.yellow, bg = colors.bg, style = "bold" },
+      BufferCurrentSign = { fg = colors.cyan, bg = colors.bg },
+      BufferCurrentTarget = { fg = colors.red, bg = colors.bg, style = "bold" },
+      BufferVisible = { fg = colors.fg, bg = colors.bg },
+      BufferVisibleIndex = { fg = colors.fg, bg = colors.bg },
+      BufferVisibleMod = { fg = colors.yellow, bg = colors.bg, style = "bold" },
+      BufferVisibleSign = { fg = colors.light_gray, bg = colors.bg },
+      BufferVisibleTarget = { fg = colors.red, bg = colors.bg, style = "bold" },
       BufferInactive = { fg = colors.light_gray, bg = colors.active },
       BufferInactiveIndex = { fg = colors.light_gray, bg = colors.active },
       BufferInactiveMod = { fg = colors.yellow, bg = colors.active },
@@ -740,9 +739,9 @@ function theme.highlights(colors, config)
     end
 
     -- Disable nvim-tree background
-    --if config.disable.background then
-    --  remove_background(plugins.NvimTreeNormal)
-    --end
+    if config.disable.background then
+      remove_background(plugins.NvimTreeNormal)
+    end
 
     return plugins
   end
