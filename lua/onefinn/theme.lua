@@ -208,7 +208,7 @@ function theme.highlights(colors, config)
       -- tab pages line, where there are no labels
       TabLineFill = { fg = colors.light_gray, bg = colors.active },
       -- tab pages line, active tab page label
-      TablineSel = { fg = colors.cyan, bg = colors.float },
+      TablineSel = { fg = colors.cyan, bg = colors.active },
       Tabline = { fg = colors.light_gray, bg = colors.active },
       -- titles for output from ":set all", ":autocmd" etc.
       Title = { fg = colors.green, bg = colors.none, style = "bold" },
@@ -254,11 +254,11 @@ function theme.highlights(colors, config)
 
       -- normal text and background color
       Normal = { fg = colors.fg, bg = colors.bg },
-      NormalNC = { bg = colors.bg },
+      NormalNC = { bg = colors.active },
       SignColumn = { fg = colors.fg, bg = colors.none },
 
       -- the column separating vertically split windows
-      VertSplit = { fg = colors.bg },
+      VertSplit = { fg = colors.active },
 
       EndOfBuffer = { fg = colors.gray },
     }
