@@ -223,9 +223,9 @@ function theme.highlights(colors, config)
       -- current match in 'wildmenu' completion
       WildMenu = { fg = colors.yellow, bg = colors.none, style = "bold" },
       -- window bar of current window
-      WinBar = { fg = colors.fg, bg = colors.bg },
+      WinBar = { fg = colors.fg, bg = colors.active },
       -- window bar of not-current windows
-      WinBarNC = { fg = colors.light_gray, bg = colors.bg },
+      WinBarNC = { fg = colors.light_gray, bg = colors.active },
       -- Screen-column at the cursor, when 'cursorcolumn' is set.
       CursorColumn = { fg = colors.none, bg = colors.float },
       -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
@@ -674,19 +674,18 @@ function theme.highlights(colors, config)
       -- BufferLine
       BufferLineIndicatorSelected = { fg = colors.yellow },
       BufferLineFill = { bg = colors.active },
-      BufferLineSelected = { bg = colors.active },
 
       -- barbar
-      BufferCurrent = { fg = colors.fg, bg = colors.bg },
-      BufferCurrentIndex = { fg = colors.fg, bg = colors.bg },
-      BufferCurrentMod = { fg = colors.yellow, bg = colors.bg, style = "bold" },
-      BufferCurrentSign = { fg = colors.cyan, bg = colors.bg },
-      BufferCurrentTarget = { fg = colors.red, bg = colors.bg, style = "bold" },
-      BufferVisible = { fg = colors.fg, bg = colors.bg },
-      BufferVisibleIndex = { fg = colors.fg, bg = colors.bg },
-      BufferVisibleMod = { fg = colors.yellow, bg = colors.bg, style = "bold" },
-      BufferVisibleSign = { fg = colors.light_gray, bg = colors.bg },
-      BufferVisibleTarget = { fg = colors.red, bg = colors.bg, style = "bold" },
+      BufferCurrent = { fg = colors.fg, bg = colors.active },
+      BufferCurrentIndex = { fg = colors.fg, bg = colors.active },
+      BufferCurrentMod = { fg = colors.yellow, bg = colors.active, style = "bold" },
+      BufferCurrentSign = { fg = colors.cyan, bg = colors.active },
+      BufferCurrentTarget = { fg = colors.red, bg = colors.active, style = "bold" },
+      BufferVisible = { fg = colors.fg, bg = colors.active },
+      BufferVisibleIndex = { fg = colors.fg, bg = colors.active },
+      BufferVisibleMod = { fg = colors.yellow, bg = colors.active, style = "bold" },
+      BufferVisibleSign = { fg = colors.light_gray, bg = colors.active },
+      BufferVisibleTarget = { fg = colors.red, bg = colors.active, style = "bold" },
       BufferInactive = { fg = colors.light_gray, bg = colors.active },
       BufferInactiveIndex = { fg = colors.light_gray, bg = colors.active },
       BufferInactiveMod = { fg = colors.yellow, bg = colors.active },
