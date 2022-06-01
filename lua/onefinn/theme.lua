@@ -739,9 +739,9 @@ function theme.highlights(colors, config)
     end
 
     -- Disable nvim-tree background
-    if config.disable.background then
-      remove_background(plugins.NvimTreeNormal)
-    end
+    -- if config.disable.background then
+    --   remove_background(plugins.NvimTreeNormal)
+    -- end
 
     return plugins
   end
