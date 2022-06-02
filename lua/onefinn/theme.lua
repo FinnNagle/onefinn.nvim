@@ -231,7 +231,7 @@ function theme.highlights(colors, config)
       -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
       CursorLine = { fg = colors.none, bg = colors.active },
       -- Normal mode message in the cmdline
-      NormalMode = { fg = colors.cyan, bg = colors.none, style = "reverse" },
+      NormalMode = { fg = colors.light_gray, bg = colors.none, style = "reverse" },
       -- Insert mode message in the cmdline
       InsertMode = { fg = colors.green, bg = colors.none, style = "reverse" },
       -- Replace mode message in the cmdline
@@ -239,7 +239,7 @@ function theme.highlights(colors, config)
       -- Visual mode message in the cmdline
       VisualMode = { fg = colors.purple, bg = colors.none, style = "reverse" },
       -- Command mode message in the cmdline
-      CommandMode = { fg = colors.yellow, bg = colors.none, style = "reverse" },
+      CommandMode = { fg = colors.cyan, bg = colors.none, style = "reverse" },
       Warnings = { fg = colors.warn },
 
       healthError = { fg = colors.error },
