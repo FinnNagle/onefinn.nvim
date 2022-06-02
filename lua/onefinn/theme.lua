@@ -239,7 +239,7 @@ function theme.highlights(colors, config)
       -- Visual mode message in the cmdline
       VisualMode = { fg = colors.purple, bg = colors.none, style = "reverse" },
       -- Command mode message in the cmdline
-      CommandMode = { fg = colors.cyan, bg = colors.none, style = "reverse" },
+      CommandMode = { fg = colors.cyan, bg = colors.float, style = "reverse" },
       Warnings = { fg = colors.warn },
 
       healthError = { fg = colors.error },
