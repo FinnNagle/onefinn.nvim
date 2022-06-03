@@ -615,7 +615,7 @@ function theme.highlights(colors, config)
       NvimTreeFolderIcon = { fg = colors.yellow },
       NvimTreeEmptyFolderName = { fg = colors.blue },
       NvimTreeOpenedFolderName = { fg = colors.blue, style = "bold" },
-      NvimTreeIndentMarker = { fg = colors.float },
+      NvimTreeIndentMarker = { fg = colors.gray },
       NvimTreeGitDirty = { fg = colors.cyan },
       NvimTreeGitNew = { fg = colors.diff_add },
       NvimTreeGitStaged = { fg = colors.purple },
