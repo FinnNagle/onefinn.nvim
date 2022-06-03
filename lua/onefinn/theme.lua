@@ -609,7 +609,7 @@ function theme.highlights(colors, config)
       TelescopeMatching = { fg = colors.yellow, style = "bold" },
 
       -- NvimTree
-      NvimTreeSymlink = { fg = colors.cyan, style = "bold" },
+      NvimTreeSymlink = { fg = colors.cyan },
       NvimTreeRootFolder = { fg = colors.green, style = "bold" },
       NvimTreeFolderName = { fg = colors.blue, style = "bold" },
       NvimTreeFolderIcon = { fg = colors.yellow },
@@ -620,10 +620,10 @@ function theme.highlights(colors, config)
       NvimTreeGitNew = { fg = colors.diff_add },
       NvimTreeGitStaged = { fg = colors.purple },
       NvimTreeGitDeleted = { fg = colors.diff_remove },
-      NvimTreeExecFile = { fg = colors.green, style = "bold" },
+      NvimTreeExecFile = { fg = colors.green },
       NvimTreeOpenedFile = { fg = colors.none },
       NvimTreeSpecialFile = { fg = colors.orange, style = "underline" },
-      NvimTreeImageFile = { fg = colors.purple, style = "bold" },
+      NvimTreeImageFile = { fg = colors.purple },
       NvimTreeNormal = { fg = colors.fg, bg = colors.active },
       NvimTreeCursorLine = { bg = colors.float },
       NvimTreeVertSplit = { fg = colors.active, bg = colors.active },
