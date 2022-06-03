@@ -612,7 +612,7 @@ function theme.highlights(colors, config)
       NvimTreeSymlink = { fg = colors.cyan, style = "bold" },
       NvimTreeRootFolder = { fg = colors.green, style = "bold" },
       NvimTreeFolderName = { fg = colors.blue, style = "bold" },
-      NvimTreeFolderIcon = { fg = colors.light_green },
+      NvimTreeFolderIcon = { fg = colors.yellow },
       NvimTreeEmptyFolderName = { fg = colors.blue },
       NvimTreeOpenedFolderName = { fg = colors.blue, style = "bold" },
       NvimTreeIndentMarker = { fg = colors.active },
