@@ -286,7 +286,7 @@ function theme.highlights(colors, config)
 
     -- Set transparent eob lines
     if config.disable.eob_lines then
-      editor.EndOfBuffer["fg"] = colors.none
+      editor.EndOfBuffer["fg"] = colors.bg
     end
 
     -- Inverse highlighting
